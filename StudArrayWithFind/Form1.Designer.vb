@@ -36,6 +36,8 @@ Partial Class Form1
         Me.btnAddStud = New System.Windows.Forms.Button()
         Me.lstStud = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
+        Me.chkPaid = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtFirstName
@@ -129,10 +131,10 @@ Partial Class Form1
         '
         'btnAddStud
         '
-        Me.btnAddStud.Location = New System.Drawing.Point(39, 129)
+        Me.btnAddStud.Location = New System.Drawing.Point(456, 127)
         Me.btnAddStud.Name = "btnAddStud"
         Me.btnAddStud.Size = New System.Drawing.Size(104, 23)
-        Me.btnAddStud.TabIndex = 11
+        Me.btnAddStud.TabIndex = 15
         Me.btnAddStud.Text = "Add Student"
         Me.btnAddStud.UseVisualStyleBackColor = True
         '
@@ -153,11 +155,31 @@ Partial Class Form1
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "List of entered students (for testing)"
         '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(36, 127)
+        Me.txtPhone.Mask = "9999-000-000"
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(100, 20)
+        Me.txtPhone.TabIndex = 11
+        '
+        'chkPaid
+        '
+        Me.chkPaid.AutoSize = True
+        Me.chkPaid.Location = New System.Drawing.Point(142, 127)
+        Me.chkPaid.Name = "chkPaid"
+        Me.chkPaid.Size = New System.Drawing.Size(47, 17)
+        Me.chkPaid.TabIndex = 13
+        Me.chkPaid.Text = "Paid"
+        Me.chkPaid.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(611, 391)
+        Me.Controls.Add(Me.chkPaid)
+        Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.lstStud)
         Me.Controls.Add(Me.btnAddStud)
@@ -195,4 +217,6 @@ Partial Class Form1
 
     Friend WithEvents lstStud As ListBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents txtPhone As MaskedTextBox
+    Friend WithEvents chkPaid As CheckBox
 End Class

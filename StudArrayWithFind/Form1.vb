@@ -6,6 +6,9 @@
         Public DOB As Date
         Public gender As Char
         Public avMk As Single
+        Public phoneNo As String
+        Public paid As Boolean
+
     End Class
     Dim students(9) As STUDENT
     Dim studentCount As Integer = 0
@@ -21,21 +24,29 @@
         students(0).DOB = "9/6/63"
         students(0).gender = "m"
         students(0).avMk = 78.2
+        students(0).phoneNo = "0410783923"
+        students(0).paid = True
         students(1).firstname = "Jennifer"
         students(1).lastname = "Lawrence"
         students(1).DOB = "15/8/90"
         students(1).gender = "f"
         students(1).avMk = 88.2
+        students(1).phoneNo = "0234968391"
+        students(1).paid = False
         students(2).firstname = "George"
         students(2).lastname = "Clooney"
         students(2).DOB = "6/5/61"
         students(2).gender = "f"
         students(2).avMk = 68.2
+        students(2).phoneNo = "0483827485"
+        students(2).paid = False
         students(3).firstname = "Scarlett"
         students(3).lastname = "Johansson"
         students(3).DOB = "22/11/84"
         students(3).gender = "f"
         students(3).avMk = 72.2
+        students(3).phoneNo = "0573647393"
+        students(3).paid = True
         'set the student count to the number of students which have been entered
         studentCount = 4
         displayList()
@@ -54,6 +65,8 @@
         txtDOB.Text = ""
         txtGender.Text = ""
         txtAvMk.Text = ""
+        txtPhone.Text = ""
+        chkPaid.Text = False
         displayList()
     End Sub
     Private Sub displayList()
@@ -61,8 +74,13 @@
         lstStud.Items.Clear()
         'loop through the array to print all rows
         For i = 0 To studentCount - 1
-            lstStud.Items.Add(students(i).firstname & " - " & students(i).lastname & " - " &
-                              students(i).DOB & " - " & students(i).gender & " - " & students(i).avMk & ".")
+            lstStud.Items.Add(students(i).firstname & " - " &
+                              students(i).lastname & " - " &
+                              students(i).DOB & " - " &
+                              students(i).gender & " - " &
+                              students(i).avMk & " - " &
+                              students(i).phoneNo & " - " &
+                              students(i).paid & " . ")
         Next
     End Sub
 End Class
