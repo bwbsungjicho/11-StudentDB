@@ -17,6 +17,34 @@
             <td>1.6</td>
             <td>Added 2 extra fields, 1 for phone numbers, and another for the paid checkbox</td>
         </tr>
+        <tr>
+            <td>1.7.1</td>
+            <td>Added a method to validate gender. The code was able to be heavily simplified by using 
+            OR statements in the gender validation process, instead of using 4 if statements. The code 
+            ran into a runtime error after the validation process was over, because the sub didn't end after 
+            the validation, which rendered the validation process useless. After this small bug was fixed, 
+            the gender validaation process was added fully.</td>
+        </tr>
+        <tr>
+            <td>1.7.2</td>
+            <td>Added a method to validate first name and last name. The code checked if 
+            the field was blank, and if it was, sent a message box, and ended the sub. 
+            I went back to the gender validation code, and it caused a runtime error when the 
+            field was completely blank. A work in progress to fix this problem where it crashes when 
+            the gender is left blank.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+
+<!--
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+-->
+
     </table>
 </body>
 </html>

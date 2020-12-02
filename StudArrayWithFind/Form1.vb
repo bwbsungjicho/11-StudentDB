@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+    'version 1.7.3 rn'
     'set up a record or "class" for a student
     Class STUDENT
         Public firstname As String
@@ -52,21 +53,35 @@
         displayList()
     End Sub
     Private Sub btnAddStud_Click(sender As Object, e As EventArgs) Handles btnAddStud.Click
+        'Name validation'
+        If txtFirstName.Text = "" And txtLastName.Text = "" Then
+            MsgBox("Please enter a first name and a last name")
+            Exit Sub
+        End If
+
+        'Gender validation'
+        If maleButton.Checked = True Then
+
+        End If
+
+
+
         'place text from text boxes into the array - first students(0), then students(1), students(2) etc
         students(studentCount).firstname = txtFirstName.Text
         students(studentCount).lastname = txtLastName.Text
         students(studentCount).DOB = txtDOB.Text
-        students(studentCount).gender = txtGender.Text
+        'students(studentCount).gender = txtGender.Text
         students(studentCount).avMk = txtAvMk.Text
         studentCount += 1
         'return text boxes to blank ready for next entry
         txtFirstName.Text = ""
         txtLastName.Text = ""
         txtDOB.Text = ""
-        txtGender.Text = ""
+        maleButton.Checked = False
+        femaleButton.Checked = False
         txtAvMk.Text = ""
         txtPhone.Text = ""
-        chkPaid.Text = False
+        'chkPaid.Text = False
         displayList()
     End Sub
     Private Sub displayList()
